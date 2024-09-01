@@ -1,0 +1,11 @@
+FROM python:3.12
+
+WORKDIR /app
+
+RUN pip install pyTelegramBotAPI
+
+ADD bot.py /app/
+
+ENV TOKEN="4839574812:AAFD39kkdpWt3ywyRZergyOLMaJhac60qc"
+
+ENTRYPOINT python bot.py
